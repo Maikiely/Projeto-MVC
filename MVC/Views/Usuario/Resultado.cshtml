@@ -1,0 +1,64 @@
+﻿@model MVC.Models.Usuario
+@{
+    ViewBag.Title = "Resultado Usuário";
+}
+
+<h2>Listar Dados Usuário</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Usuário Cadastrado</legend>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Nome)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Nome)
+        </div>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Observacoes)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Observacoes)
+        </div>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Idade)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Idade)
+        </div>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Senha)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Senha)
+        </div>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.ConfirmaSenha)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.ConfirmaSenha)
+        </div>
+        <br>
+        <p>@Html.ActionLink("Voltar","Usuario")</p>
+    </fieldset>
+
+    @section Scripts{
+        @Scripts.Render("~/ budles / jqueryval");
+    }
+
+}
+

@@ -1,0 +1,27 @@
+﻿@model  MVC.Models.Pessoa
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2>Lista</h2>
+
+<div>
+    <b>@Html.LabelFor(x => x.PessoaID)</b>
+</div>
+<div>
+    @Model.PessoaID
+</div>
+<div>
+    @Html.LabelFor(x => x.Nome)
+</div>
+<div>
+    @Model.Nome
+</div>
+<div>
+    @Html.LabelFor(x => x.Tipo)
+</div>
+<div>
+    @Model.Tipo
+</div>
+
+<a href="~/" >Voltar</a>
